@@ -1,0 +1,155 @@
+.mahsulotlar-section {
+  background: linear-gradient(180deg, #111, #1a1a1a);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.bolim-nomi {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #f5d442;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+/* GRID: har qatorda 4 ta */
+.mahsulotlar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CARD STYLING */
+.mahsulot-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.05);
+  position: relative;
+
+  opacity: 0;
+  transform: translateY(80px) scale(0.9);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mahsulot-card.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.mahsulot-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+/* IMAGE */
+.rasm-quti {
+  position: relative;
+  overflow: hidden;
+}
+
+.rasm-quti img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.mahsulot-card:hover img {
+  transform: scale(1.08);
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.mahsulot-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay button {
+  background: linear-gradient(135deg, #f5d442, #ffcc00);
+  border: none;
+  color: #111;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  letter-spacing: 1px;
+}
+
+.overlay button:hover {
+  background: linear-gradient(135deg, #ffe259, #ffa751);
+  transform: scale(1.08);
+  color: #000;
+}
+
+/* INFO */
+.mahsulot-info {
+  padding: 20px;
+}
+
+.mahsulot-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.mahsulot-info p {
+  color: #f5d442;
+  font-weight: 600;
+}
+
+/* KOPROQ BUTTON */
+.koproq-btn {
+  margin-top: 60px;
+  background: linear-gradient(135deg, #f5d442, #ffcc00);
+  border: none;
+  color: #111;
+  font-weight: 600;
+  padding: 15px 40px;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: 0.4s ease;
+  letter-spacing: 1px;
+}
+
+.koproq-btn:hover {
+  background: linear-gradient(135deg, #ffe259, #ffa751);
+  transform: scale(1.08);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .mahsulotlar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mahsulotlar-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .mahsulot-card {
+    width: 90%;
+  }
+}

@@ -1,0 +1,43 @@
+const translationsEn = {
+  home: "Home",
+  products: "Products",
+  about: "About Us",
+  contact: "Contact",
+  contactMe: "Contact Me",
+  ajoyibMebellar: "Wonderful Furniture",
+  qoldaYasalgan: "Handcrafted and 100% Quality",
+  mahsulotlarniKorish: "View Products",
+  bizningMahsulotlar: "Our Products",
+  qulayYotoq: "Comfortable Bed",
+  yogochStol: "Wooden Table",
+  oshxonaNaborToplami: "Kitchen Set Collection",
+  spalniy: "Bedroom Set",
+  kiyimJavon: "Wardrobe",
+  oshxonaNabori: "Kitchen Set",
+  oshxonaMebel: "Kitchen Furniture",
+  oshxonaNabor: "Kitchen Set",
+  oshxonaDivani: "Kitchen Sofa",
+  som: "UZS",
+  korish: "View",
+  koproqKorish: "View More",
+  bizhaqimizda: "About Us",
+  bizZamonaviy:
+    "We are a modern furniture manufacturing team. In every product, we strive to maintain harmony between elegance, comfort, and quality. For our clients, furniture is not just an item — it’s an element that brings warmth and aesthetics to their homes.",
+  yildan:
+    "Since 2015, we have been helping hundreds of families create the interior of their dreams. Your trust is our greatest achievement.",
+  yillikTajriba: "Years of Experience",
+  mamnunMijozlar: "Satisfied Clients",
+  dizaynLoyihalar: "Design Projects",
+  Bizbilanboglaning: "Contact Us",
+  Sizningfikringiz:
+    "Your opinion matters to us! Reach out using the details below or fill out the form — we’ll be sure to respond.",
+  Manzil: "Address",
+  Telefon: "Phone",
+  Email: "Email",
+  Ismingiz: "Your Name",
+  Emailmanzilingiz: "Your Email Address",
+  Xabaringizniyozing: "Write your message...",
+  Yuborish: "Send",
+};
+
+export default translationsEn;

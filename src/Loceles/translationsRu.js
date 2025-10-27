@@ -1,0 +1,43 @@
+const translationsRu = {
+  home: "Главная",
+  products: "Товары",
+  about: "О нас",
+  contact: "Контакты",
+  contactMe: "Связаться со мной",
+  ajoyibMebellar: "Прекрасная Мебель",
+  qoldaYasalgan: "Ручная работа и 100% качество",
+  mahsulotlarniKorish: "Посмотреть товары",
+  bizningMahsulotlar: "Наши Товары",
+  qulayYotoq: "Удобная Кровать",
+  yogochStol: "Деревянный Стол",
+  oshxonaNaborToplami: "Набор Кухонной Мебели",
+  spalniy: "Спальный Гарнитур",
+  kiyimJavon: "Шкаф для Одежды",
+  oshxonaNabori: "Кухонный Набор",
+  oshxonaMebel: "Кухонная Мебель",
+  oshxonaNabor: "Кухонный Комплект",
+  oshxonaDivani: "Кухонный Диван",
+  som: "сум",
+  korish: "Посмотреть",
+  koproqKorish: "Посмотреть больше",
+  bizhaqimizda: "О нас",
+  bizZamonaviy:
+    "Мы — современная команда по производству мебели. В каждом нашем изделии мы стремимся сохранить гармонию изящества, комфорта и качества. Для наших клиентов мебель — это не просто предмет, а элемент, приносящий в дом уют и эстетику.",
+  yildan:
+    "С 2015 года мы помогаем сотням семей создавать интерьер своей мечты. Ваше доверие — наше самое большое достижение.",
+  yillikTajriba: "Годы опыта",
+  mamnunMijozlar: "Довольные клиенты",
+  dizaynLoyihalar: "Дизайнерские проекты",
+  Bizbilanboglaning: "Свяжитесь с нами",
+  Sizningfikringiz:
+    "Ваше мнение важно для нас! Напишите нам, используя данные ниже, или заполните форму — мы обязательно ответим.",
+  Manzil: "Адрес",
+  Telefon: "Телефон",
+  Email: "Электронная почта",
+  Ismingiz: "Ваше имя",
+  Emailmanzilingiz: "Ваш адрес электронной почты",
+  Xabaringizniyozing: "Напишите ваше сообщение...",
+  Yuborish: "Отправить",
+};
+
+export default translationsRu;
