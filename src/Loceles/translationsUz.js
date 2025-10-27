@@ -2,7 +2,7 @@ const translationsUz = {
     home: `Bosh sahifa`,
     products: `Tavarlar`,
     about: `Biz haqimizda`,
-    contact: `Salom`,
+    contact: `Aloqa`,
     contactMe: "Bog'lanish uchun",
     ajoyibMebellar: "Ajoyib Mebellar",
     qoldaYasalgan: "Qo'lda Yasalgan va 100% sifat",
