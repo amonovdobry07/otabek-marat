@@ -22,7 +22,7 @@ const Contact = () => {
         observer.observe(section);
     }, []);
 
-    const{t, i18n} = useTranslation()
+    const { t, i18n } = useTranslation()
     return (
         <section className="contact" id="contact">
             <div className="contact-container">
@@ -38,7 +38,7 @@ const Contact = () => {
                             <i className="fas fa-map-marker-alt"></i>
                             <div>
                                 <h4>{t(`Manzil`)}</h4>
-                                <p>Buxoro shahri, Minor</p>
+                                <p>Buxoro viloyat Vobkent Tumani Kulolchi MFY 236</p>
                             </div>
                         </div>
 
@@ -48,10 +48,10 @@ const Contact = () => {
                                 <h4>{t(`Telefon`)}</h4>
                                 <a
                                     href="tel:+998972827747"
-                                    style={{ color: "#bbb" }}
+                                    style={{ color: "#ffffffff" }}
                                     rel="noopener noreferrer"
                                 >
-                                    +998 (97) 282 77 47
+                                    <p> +998 (97) 282 77 47</p>
                                 </a>
                             </div>
                         </div>
@@ -60,14 +60,14 @@ const Contact = () => {
                             <i className="fas fa-envelope"></i>
                             <div>
                                 <h4>{t(`Email`)}</h4>
-                                <p>ogabekomonov79@gmail.com</p>
+                                <p>otabekochilov@gmail.com</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="social-links">
                         <a
-                            href="https://t.me/Oga_dobry07"
+                            href="https://t.me/joinchat/AAAAAEmnJj9WH6sevO3JHw"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -75,7 +75,7 @@ const Contact = () => {
                         </a>
 
                         <a
-                            href="https://www.instagram.com/_amonoff_06_/"
+                            href="https://www.instagram.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

@@ -3,7 +3,8 @@ import { FaPhoneFlip } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa";
 import { useState } from "react";
 import "./Header.css"
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
+import { MdOutlineClose } from "react-icons/md";
 
 const Header = () => {
     const [menuActive, setMenuActive] = useState(false);
@@ -16,7 +17,7 @@ const Header = () => {
         setMenuActive(false);
     };
 
-    const {t, i18n} = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <header>
@@ -41,6 +42,7 @@ const Header = () => {
                                 <li>
                                     <a href="#contact" onClick={handleLinkClick}>{t(`contact`)}</a>
                                 </li>
+                                <MdOutlineClose className="close-btn" onClick={Change_bar} />
                             </ul>
 
                             <div className="header_bar">
@@ -50,7 +52,7 @@ const Header = () => {
                             <div className="langproviper">
                                 <select
                                     id="select"
-                                    onChange={(e) => {i18n.changeLanguage(e.target.value)}}
+                                    onChange={(e) => { i18n.changeLanguage(e.target.value) }}
                                     defaultValue="uz"
                                 >
                                     <option value="uz">🇺🇿 O'zbek</option>
@@ -65,7 +67,7 @@ const Header = () => {
                         <h1>{t(`ajoyibMebellar`)}</h1>
                         <h3>{t(`qoldaYasalgan`)}</h3>
                         <button>
-                            <a href="https://t.me/joinchat/AAAAAEmnJj9WH6sevO3JHw" rel="noopener noreferrer" target="_blank" style={{color: "black"}}>{t(`mahsulotlarniKorish`)}</a>
+                            <a href="https://t.me/joinchat/AAAAAEmnJj9WH6sevO3JHw" rel="noopener noreferrer" target="_blank" style={{ color: "black" }}>{t(`mahsulotlarniKorish`)}</a>
                         </button>
                     </div>
                 </div>

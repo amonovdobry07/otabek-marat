@@ -16,20 +16,20 @@ const Mahsulotlar = () => {
   const [koproq, setKoproq] = useState(false); // bosilganda true bo‘ladi
   const { t, i18n } = useTranslation();
   const mahsulotlar = [
-    { id: 1, nomi: t(`qulayYotoq`), narx: "1 200 000 "+t(`som`), rasm: image4 },
-    { id: 2, nomi: t(`yogochStol`), narx: "3 800 000 "+t(`som`), rasm: image1 },
+    { id: 1, nomi: t(`qulayYotoq`), narx: "1 200 000 " + t(`som`), rasm: image4 },
+    { id: 2, nomi: t(`yogochStol`), narx: "3 800 000 " + t(`som`), rasm: image1 },
     {
       id: 3,
       nomi: t(`oshxonaNaborToplami`),
-      narx: "4 500 000 "+t(`som`),
+      narx: "4 500 000 " + t(`som`),
       rasm: image2,
     },
-    { id: 4, nomi: t(`spalniy`), narx: "1 800 000"+t(`som`), rasm: image3 },
-    { id: 5, nomi: t(`kiyimJavon`), narx: "5 200 000 "+t(`som`), rasm: image5 },
-    { id: 6, nomi: t(`oshxonaNabori`), narx: "2 900 000 "+t(`som`), rasm: image6 },
-    { id: 7, nomi: t(`oshxonaMebel`), narx: "1 000 000 "+t(`som`), rasm: image7 },
-    { id: 8, nomi: t(`oshxonaNabor`), narx: "3 200 000 "+t(`som`), rasm: image8 },
-    { id: 9, nomi: t(`oshxonaDivani`), narx: "3 200 000 "+t(`som`), rasm: image9 },
+    { id: 4, nomi: t(`spalniy`), narx: "1 800 000" + t(`som`), rasm: image3 },
+    { id: 5, nomi: t(`kiyimJavon`), narx: "5 200 000 " + t(`som`), rasm: image5 },
+    { id: 6, nomi: t(`oshxonaNabori`), narx: "2 900 000 " + t(`som`), rasm: image6 },
+    { id: 7, nomi: t(`oshxonaMebel`), narx: "1 000 000 " + t(`som`), rasm: image7 },
+    { id: 8, nomi: t(`oshxonaNabor`), narx: "3 200 000 " + t(`som`), rasm: image8 },
+    { id: 9, nomi: t(`oshxonaDivani`), narx: "3 200 000 " + t(`som`), rasm: image9 },
   ];
 
   // dastlab 4 ta chiqadi
@@ -64,7 +64,7 @@ const Mahsulotlar = () => {
             <div className="rasm-quti">
               <img src={m.rasm} alt={m.nomi} />
               <div className="overlay">
-                <button>{t(`korish`)}</button>
+
               </div>
             </div>
             <div className="mahsulot-info">
