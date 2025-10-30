@@ -21,7 +21,7 @@ const translationsUz = {
     korish: "Ko‘rish",
     koproqKorish: "Ko‘proq ko‘rish",
     bizhaqimizda: "Biz haqimizda",
-    bizZamonaviy: "Biz — zamonaviy mebel ishlab chiqaruvchi jamoamiz. Har bir mahsulotimizda nafislik, qulaylik va sifat uyg‘unligini saqlashgaintilamiz. Mijozlarimiz uchun mebel — bu faqat buyum emas, balkiuyda iliqlik va estetikani ifodalovchi elementdir",
+    bizZamonaviy: "Biz — zamonaviy mebel ishlab chiqaruvchi jamoamiz. Har bir mahsulotimizda nafislik, qulaylik va sifat uyg‘unligini saqlashga intilamiz. Mijozlarimiz uchun mebel — bu faqat buyum emas, balki uyda iliqlik va estetikani ifodalovchi elementdir",
     yildan: "2015-yildan buyon biz yuzlab oilalarga o‘z orzularidagi interyerni yaratishda yordam berib kelmoqdamiz. Sizning ishonchingiz bizning eng katta yutug‘imizdir.",
     yillikTajriba: "Yillik tajriba",
     mamnunMijozlar: "Mamnun mijozlar",

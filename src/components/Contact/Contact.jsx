@@ -82,9 +82,6 @@ const Contact = () => {
                             <FaInstagram className="icons-social" /> Instagram
                         </a>
 
-                        <a href="#" rel="noopener noreferrer">
-                            <RiFacebookFill className="icons-social" /> Facebook
-                        </a>
                     </div>
                 </div>
 
