@@ -13,18 +13,15 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Mahsulotlar = () => {
-  const [koproq, setKoproq] = useState(false); // bosilganda true bo‘ladi
-  const { t, i18n } = useTranslation();
+  const [koproq, setKoproq] = useState(false);
+  const [animating, setAnimating] = useState(false);
+  const { t } = useTranslation();
+
   const mahsulotlar = [
     { id: 1, nomi: t(`qulayYotoq`), narx: "1 200 000 " + t(`som`), rasm: image4 },
     { id: 2, nomi: t(`yogochStol`), narx: "3 800 000 " + t(`som`), rasm: image1 },
-    {
-      id: 3,
-      nomi: t(`oshxonaNaborToplami`),
-      narx: "4 500 000 " + t(`som`),
-      rasm: image2,
-    },
-    { id: 4, nomi: t(`spalniy`), narx: "1 800 000" + t(`som`), rasm: image3 },
+    { id: 3, nomi: t(`oshxonaNaborToplami`), narx: "4 500 000 " + t(`som`), rasm: image2 },
+    { id: 4, nomi: t(`spalniy`), narx: "1 800 000 " + t(`som`), rasm: image3 },
     { id: 5, nomi: t(`kiyimJavon`), narx: "5 200 000 " + t(`som`), rasm: image5 },
     { id: 6, nomi: t(`oshxonaNabori`), narx: "2 900 000 " + t(`som`), rasm: image6 },
     { id: 7, nomi: t(`oshxonaMebel`), narx: "1 000 000 " + t(`som`), rasm: image7 },
@@ -32,12 +29,10 @@ const Mahsulotlar = () => {
     { id: 9, nomi: t(`oshxonaDivani`), narx: "3 200 000 " + t(`som`), rasm: image9 },
   ];
 
-  // dastlab 4 ta chiqadi
   const korinadiganMahsulotlar = koproq ? mahsulotlar : mahsulotlar.slice(0, 4);
 
   useEffect(() => {
     const cards = document.querySelectorAll(".mahsulot-card");
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, index) => {
@@ -50,9 +45,24 @@ const Mahsulotlar = () => {
       },
       { threshold: 0.2 }
     );
-
     cards.forEach((card) => observer.observe(card));
   }, [koproq]);
+
+  // Ortga bosilganda yumshoq yo‘qolish animatsiyasi
+  const handleOrtga = () => {
+    setAnimating(true);
+    const cards = document.querySelectorAll(".mahsulot-card");
+    cards.forEach((card, index) => {
+      card.style.transitionDelay = `${index * 0.05}s`;
+      card.classList.add("fade-out");
+    });
+
+    // 0.5 soniyadan keyin 4 ta kartani qoldiramiz
+    setTimeout(() => {
+      setKoproq(false);
+      setAnimating(false);
+    }, 600);
+  };
 
   return (
     <section id="tavarlar" className="mahsulotlar-section">
@@ -60,12 +70,13 @@ const Mahsulotlar = () => {
 
       <div className="mahsulotlar-grid">
         {korinadiganMahsulotlar.map((m) => (
-          <div key={m.id} className="mahsulot-card">
+          <div
+            key={m.id}
+            className={`mahsulot-card ${animating ? "fade-out" : ""}`}
+          >
             <div className="rasm-quti">
               <img src={m.rasm} alt={m.nomi} />
-              <div className="overlay">
-
-              </div>
+              <div className="overlay"></div>
             </div>
             <div className="mahsulot-info">
               <h3>{m.nomi}</h3>
@@ -75,12 +86,17 @@ const Mahsulotlar = () => {
         ))}
       </div>
 
-      {/* Ko‘proq tugmasi */}
-      {!koproq && (
-        <button className="koproq-btn" onClick={() => setKoproq(true)}>
-          {t(`koproqKorish`)}
-        </button>
-      )}
+      <div className="btn-container">
+        {!koproq ? (
+          <button className="koproq-btn" onClick={() => setKoproq(true)}>
+            {t(`koproqKorish`)}
+          </button>
+        ) : (
+          <button className="ortga-btn" onClick={handleOrtga}>
+            {t(`ortga`)}
+          </button>
+        )}
+      </div>
     </section>
   );
 };

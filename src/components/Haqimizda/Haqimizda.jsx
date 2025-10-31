@@ -23,7 +23,7 @@ const Haqimizda = () => {
     observer.observe(section);
   }, []);
 
-  const {t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
 
   return (
     <section id="biz-haqimizda" className="about-section">
@@ -47,7 +47,7 @@ const Haqimizda = () => {
               <p>{t(`yillikTajriba`)}</p>
             </div>
             <div className="stat">
-              <h3>5000+</h3>
+              <h3>1000+</h3>
               <p>{t(`mamnunMijozlar`)}</p>
             </div>
             <div className="stat">

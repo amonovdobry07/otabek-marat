@@ -64,11 +64,6 @@ const Header = () => {
                     </nav>
 
                     <div className="big-logo">
-                        <h1>{t(`ajoyibMebellar`)}</h1>
-                        <h3>{t(`qoldaYasalgan`)}</h3>
-                        <button>
-                            <a href="https://t.me/joinchat/AAAAAEmnJj9WH6sevO3JHw" rel="noopener noreferrer" target="_blank" style={{ color: "black" }}>{t(`mahsulotlarniKorish`)}</a>
-                        </button>
                     </div>
                 </div>
             </div>

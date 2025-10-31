@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 
+body {
+    background: #000;
+}
+
 .contact {
     background: linear-gradient(180deg, #101010, #050505);
     color: #fff;
@@ -8,9 +12,10 @@
     padding: 100px 20px;
     overflow: hidden;
     position: relative;
+    transition: background 0.4s ease;
 }
 
-/* 🔹 Yumshoq “fade-up + blur” chiqish */
+/* 🔹 Yumshoq chiqish/yo‘qolish animatsiyasi */
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -19,8 +24,10 @@
     flex-wrap: wrap;
     opacity: 0;
     transform: translateY(80px);
-    filter: blur(15px);
-    transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    filter: blur(20px);
+    background: transparent;
+    will-change: opacity, transform, filter;
+    transition: opacity 1.2s ease, transform 1.2s ease, filter 1.2s ease;
 }
 
 .contact.show .contact-container {
@@ -29,9 +36,10 @@
     filter: blur(0);
 }
 
-/* Chap qism */
+/* 🔸 Chap qism */
 .contact-left {
     flex: 1 1 45%;
+    background: transparent;
 }
 
 .section-title {
@@ -49,7 +57,7 @@
     font-size: 15px;
 }
 
-/* Detallar */
+/* 🔹 Detallar */
 .contact-details .detail {
     display: flex;
     align-items: flex-start;
@@ -57,7 +65,8 @@
     margin-bottom: 25px;
     transform: translateX(-40px);
     opacity: 0;
-    transition: all 0.8s ease;
+    transition: all 0.9s ease;
+    will-change: transform, opacity;
 }
 
 .contact.show .detail {
@@ -71,22 +80,24 @@
     margin-top: 5px;
     transition: all 0.3s ease;
 }
+
 .detail i:hover {
     transform: scale(1.2) rotate(10deg);
     color: #fff;
 }
 
-/* Ijtimoiy tarmoqlar */
+/* 🔸 Ijtimoiy tarmoqlar */
 .social-links {
     margin-top: 30px;
     opacity: 0;
     transform: translateY(25px);
     transition: all 1s ease;
 }
+
 .contact.show .social-links {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 0.3s;
+    transition-delay: 0.4s;
 }
 
 .social-links a {
@@ -102,13 +113,14 @@
     text-decoration: none;
     transition: all 0.4s ease;
 }
+
 .social-links a:hover {
     background: #fff;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
 
-/* Forma */
+/* 🔹 Forma (o‘ng qism) */
 .contact-right {
     flex: 1 1 45%;
     background: #111;
@@ -117,14 +129,17 @@
     box-shadow: 0 6px 25px rgba(255, 255, 255, 0.05);
     opacity: 0;
     transform: translateX(60px);
-    transition: all 1.2s ease;
+    will-change: opacity, transform;
+    transition: opacity 1.2s ease, transform 1.2s ease;
 }
+
 .contact.show .contact-right {
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0.3s;
 }
 
+/* 🔸 Forma elementlari */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -160,6 +175,7 @@
     min-height: 120px;
 }
 
+/* 🔹 Tugma */
 .btn {
     background: #f5d442;
     color: #000;
@@ -170,13 +186,14 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .btn:hover {
     background: #fff;
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
 }
 
-/* RESPONSIVE */
+/* 🔸 RESPONSIVE */
 @media (max-width: 992px) {
     .contact-container {
         flex-direction: column;
@@ -216,15 +233,16 @@
     .btn {
         font-size: 14px;
     }
-    .contact.show .social-links{
+
+    .contact.show .social-links {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        align-items: center
-
+        align-items: center;
     }
-    .social-links a{
-        width: 40%;
+
+    .social-links a {
+        width: 60%;
     }
 }

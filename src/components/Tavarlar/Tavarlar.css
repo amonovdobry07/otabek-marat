@@ -118,9 +118,14 @@
   font-weight: 600;
 }
 
-/* KOPROQ BUTTON */
-.koproq-btn {
+/* ==== TUGMALAR QISMI ==== */
+.btn-container {
+  text-align: center;
   margin-top: 60px;
+}
+
+.koproq-btn,
+.ortga-btn {
   background: linear-gradient(135deg, #f5d442, #ffcc00);
   border: none;
   color: #111;
@@ -130,11 +135,32 @@
   cursor: pointer;
   transition: 0.4s ease;
   letter-spacing: 1px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
-.koproq-btn:hover {
+.koproq-btn:hover,
+.ortga-btn:hover {
   transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
 }
+
+/* Ortga tugmasiga ozgina farq (rang o‘zgarishi) */
+.ortga-btn {
+  color: #222;
+}
+
+.ortga-btn:hover {
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: #000;
+}
+
+/* ===== YOQOLISH ANIMATSIYASI ===== */
+.fade-out {
+  opacity: 0 !important;
+  transform: translateY(40px) scale(0.9) !important;
+  transition: all 0.5s ease;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -150,5 +176,10 @@
 
   .mahsulot-card {
     width: 90%;
+  }
+
+  .koproq-btn,
+  .ortga-btn {
+    width: 80%;
   }
 }
